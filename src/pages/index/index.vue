@@ -5,6 +5,7 @@
       <text class="title">{{ title }}</text>
     </view>
     <uni-badge text="1"></uni-badge>
+    <uni-countdown :day="1" :hour="1" :minute="12" :second="40"></uni-countdown>
   </view>
 </template>
 
