@@ -16,6 +16,9 @@
     ],
     "types": [
       "@dcloudio/types",
+      "@uni-helper/uni-app-types",
+      "@uni-helper/uni-cloud-types",
+      "@uni-helper/uni-ui-types"
     ],
     "module": "ESNext",
     "moduleResolution": "Node",
@@ -37,6 +40,14 @@
     "forceConsistentCasingInFileNames": true,
     // See <https://github.com/vuejs/vue-cli/pull/5688>
     "skipLibCheck": true,
+  },
+  "vueCompilerOptions": {
+    "nativeTags": [
+      "block",
+      "component",
+      "template",
+      "slot"
+    ]
   },
   "include": [
     "types/*.d.ts",
