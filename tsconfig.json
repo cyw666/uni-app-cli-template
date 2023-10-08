@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "#/*": [
+        "./types/*"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "types": [
+      "@dcloudio/types",
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "useDefineForClassFields": true,
+    // Required in Vue projects
+    "jsx": "preserve",
+    // `"noImplicitThis": true` is part of `strict`
+    // Added again here in case some users decide to disable `strict`.
+    // This enables stricter inference for data properties on `this`.
+    "noImplicitThis": true,
+    "strict": true,
+    // Required in Vite
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "target": "ESNext",
+    // Recommended
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    // See <https://github.com/vuejs/vue-cli/pull/5688>
+    "skipLibCheck": true,
+  },
+  "include": [
+    "types/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
+}
