@@ -11,8 +11,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
+import { onLoad } from '@dcloudio/uni-app'
 
-const title = ref('Hello')
+const title = ref('This is a plugin page! ')
+onLoad(() => {
+  const miniProgramExport = requireMiniProgram()
+  const whoami = miniProgramExport.whoami
+  console.log(whoami)
+})
 </script>
 
 <style lang="scss">

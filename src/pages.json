@@ -1,7 +1,7 @@
 {
   "pages": [
     {
-      "path": "pages/hello-page",
+      "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "plugin"
       }

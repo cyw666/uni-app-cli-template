@@ -1,9 +1,10 @@
 {
   "pages": ["pages/index/index"],
   "plugins": {
-    "hello-plugin": {
+    "digital-human-plugin": {
       "version": "dev",
-      "provider": "wx1e4bb64320ad552f"
+      "provider": "wx1e4bb64320ad552f",
+      "export": "export.js"
     }
   }
 }

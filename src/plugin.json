@@ -1,6 +1,6 @@
 {
   "pages": {
-    "hello-page": "pages/hello-page"
+    "index": "pages/index/index"
   },
   "main": "index.js"
 }
