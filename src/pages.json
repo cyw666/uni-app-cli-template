@@ -1,9 +1,9 @@
 {
   "pages": [
     {
-      "path": "pages/index/index",
+      "path": "pages/hello-page",
       "style": {
-        "navigationBarTitleText": "uni-app"
+        "navigationBarTitleText": "plugin"
       }
     }
   ],
