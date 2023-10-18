@@ -19,7 +19,7 @@
     "dev:quickapp-webview": "uni -p quickapp-webview",
     "dev:quickapp-webview-huawei": "uni -p quickapp-webview-huawei",
     "dev:quickapp-webview-union": "uni -p quickapp-webview-union",
-    "dev:mp-weixin-plugin": "uni build -w -p mp-weixin --plugin --out-dir dist/dev/mp-weixin/plugin",
+    "dev:mp-weixin-plugin": "uni build -w -p mp-weixin --plugin --out-dir dist/dev/mp-weixin-plugin/plugin",
     "build:app": "uni build -p app",
     "build:app-android": "uni build -p app-android",
     "build:app-ios": "uni build -p app-ios",
@@ -37,7 +37,7 @@
     "build:quickapp-webview": "uni build -p quickapp-webview",
     "build:quickapp-webview-huawei": "uni build -p quickapp-webview-huawei",
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
-    "build:mp-weixin-plugin": "uni build -p mp-weixin --plugin --out-dir dist/build/mp-weixin/plugin",
+    "build:mp-weixin-plugin": "uni build -p mp-weixin --plugin --out-dir dist/build/mp-weixin-plugin/plugin",
     "type-check": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"

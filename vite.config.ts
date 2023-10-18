@@ -10,6 +10,9 @@ import { UnocssToUni } from 'vite-plugin-unocss-to-uni'
 
 export default defineConfig(({ command, mode, ssrBuild }) => {
   // console.log(JSON.stringify(process.env))
+  // 是否是插件
+  const isPlugin = process.env.npm_lifecycle_script?.indexOf('--plugin') !== -1
+
   const commonPlugins = [
     uni(),
     Unocss(),
@@ -28,15 +31,13 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
       {
         src: `src/susceptor/${process.env.UNI_PLATFORM}`,
         dest: `dist/${process.env.NODE_ENV === 'production' ? 'build' : 'dev'}`,
+        rename: `${process.env.UNI_PLATFORM}-plugin`,
       },
     ],
   })
 
   return {
-    plugins:
-      process.env.UNI_MP_PLUGIN === 'true'
-        ? [...commonPlugins, copyPlugin]
-        : commonPlugins,
+    plugins: isPlugin ? [...commonPlugins, copyPlugin] : commonPlugins,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),

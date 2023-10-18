@@ -3,7 +3,7 @@
   "plugins": {
     "digital-human-plugin": {
       "version": "dev",
-      "provider": "wx1e4bb64320ad552f",
+      "provider": "wx41bb5fdcd16bdb87",
       "export": "export.js"
     }
   }
