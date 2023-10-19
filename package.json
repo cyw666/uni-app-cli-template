@@ -61,6 +61,7 @@
     "@dcloudio/uni-ui": "^1.4.28",
     "@uni-helper/axios-adapter": "^1.5.1",
     "@vueuse/core": "^10.5.0",
+    "@vueuse/integrations": "^10.5.0",
     "axios": "^1.5.1",
     "dayjs": "^1.11.10",
     "js-base64": "^3.7.5",
