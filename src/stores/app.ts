@@ -141,7 +141,7 @@ export const useAppStore = defineStore('app', () => {
   const isVoiceEnable = ref<boolean>(storage.get(VOICEENABLE))
   function setVoiceEnable(value: boolean) {
     isVoiceEnable.value = value
-    const sevenDays = 10 * 1000
+    const sevenDays = 7 * 24 * 60 * 60 * 1000
     storage.set(VOICEENABLE, value, Date.now() + sevenDays)
   }
 
@@ -166,7 +166,7 @@ export const useAppStore = defineStore('app', () => {
 
   function setChatList(value: AnswerItem[]) {
     chatList.value = value || []
-    const oneDays = 10 * 1000
+    const oneDays = 1 * 24 * 60 * 60 * 1000
     storage.set(CHAT_LIST, value || [], Date.now() + oneDays)
   }
 
