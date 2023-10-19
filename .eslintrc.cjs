@@ -13,6 +13,7 @@ module.exports = {
     'eslint:recommended',
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
+    '@unocss/eslint-config/flat',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
