@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
-import copy from 'rollup-plugin-copy'
 import { fileURLToPath, URL } from 'node:url'
+import { viteStaticCopy } from 'vite-plugin-static-copy'
 import uni from '@dcloudio/vite-plugin-uni'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -24,19 +24,32 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     }),
   ]
 
-  const copyPlugin = copy({
-    copyOnce: process.env.NODE_ENV !== 'production', // 开发环境只复制一次
+  const copyPlugin = viteStaticCopy({
     targets: [
       {
         src: `src/susceptor/${process.env.UNI_PLATFORM}`,
-        dest: `dist/${process.env.NODE_ENV === 'production' ? 'build' : 'dev'}`,
+        dest: '../../',
         rename: `${process.env.UNI_PLATFORM}-plugin`,
       },
     ],
   })
 
+  const copyH5Public = viteStaticCopy({
+    targets: [
+      {
+        src: `public/**`,
+        dest: './',
+      },
+    ],
+  })
+
+  const plugins = isPlugin
+    ? [...commonPlugins, copyPlugin]
+    : process.env.UNI_PLATFORM === 'h5'
+    ? [...commonPlugins, copyH5Public]
+    : commonPlugins
   return {
-    plugins: isPlugin ? [...commonPlugins, copyPlugin] : commonPlugins,
+    plugins,
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),
