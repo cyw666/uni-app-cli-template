@@ -1,6 +1,6 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png" @click="handleClick" />
+    <image class="logo" src="@/static/logo.png" @click="handleClick" />
     <view class="text-area">
       <text class="title">{{ title }}</text>
     </view>
@@ -14,6 +14,7 @@
     <view class="action">
       <button @click="() => execute()">execute</button>
       <button @click="() => abort()">abort</button>
+      <button @click="link">跳转</button>
     </view>
   </view>
 </template>
@@ -64,6 +65,12 @@ function getProviceLinkTicket(phone: string | undefined) {
       setProvinceTicket(secondTicket)
     })
     .catch((error) => error)
+}
+
+function link() {
+  uni.redirectTo({
+    url: '/pages/aaa/index?id=1',
+  })
 }
 
 onLoad(() => {
