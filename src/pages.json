@@ -6,14 +6,12 @@
         "navigationBarTitleText": "首页"
       }
     },
-    // #ifdef H5
     {
       "path": "pages/aaa/index",
       "style": {
         "navigationBarTitleText": "测试路由"
       }
     }
-    // #endif
   ],
   "globalStyle": {
     "navigationBarTextStyle": "black",

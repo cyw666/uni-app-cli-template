@@ -1,6 +1,7 @@
 {
   "pages": {
-    "index": "pages/index/index"
+    "index": "pages/index/index",
+    "aaa": "pages/aaa/index"
   },
   "main": "index.js"
 }

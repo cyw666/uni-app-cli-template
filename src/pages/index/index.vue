@@ -68,9 +68,16 @@ function getProviceLinkTicket(phone: string | undefined) {
 }
 
 function link() {
-  uni.redirectTo({
-    url: '/pages/aaa/index?id=1',
-  })
+  let url
+  // #ifdef MP-WX-PLUGIN
+  url = 'plugin-private://wx1fa07881cd9ddd5d/pages/aaa/index?id=1'
+  // #endif
+
+  // #ifndef MP-WX-PLUGIN
+  url = '/pages/aaa/index?id=1'
+  // #endif
+
+  uni.navigateTo({ url })
 }
 
 onLoad(() => {

@@ -8,7 +8,7 @@
     "es6": false,
     "minifyWXSS": false,
     "minifyWXML": false,
-    "ignoreUploadUnusedFiles": false
+    "ignoreUploadUnusedFiles": true
   },
   "appid": "wx41bb5fdcd16bdb87",
   "pluginAppid": "wx41bb5fdcd16bdb87",

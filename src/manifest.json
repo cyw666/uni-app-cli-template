@@ -64,7 +64,7 @@
       "minified": false,
       "newFeature": true,
       "bigPackageSizeSupport": true,
-      "ignoreUploadUnusedFiles": false,
+      "ignoreUploadUnusedFiles": true,
       "minifyWXSS": false,
       "minifyWXML": false
     },
