@@ -41,7 +41,7 @@
     "build:quickapp-webview-union": "uni build -p quickapp-webview-union",
     "build:mp-weixin-plugin": "uni build -p mp-weixin --plugin --out-dir dist/build/mp-weixin-plugin/plugin --mode miniprogram-prod",
     "type-check": "vue-tsc --noEmit",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint": "eslint --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts src --fix",
     "format": "prettier --write src/"
   },
   "dependencies": {
