@@ -6,7 +6,7 @@
         "navigationBarTitleText": "首页"
       }
     },
-    // #ifdef H5 || WEB
+    // #ifdef H5
     {
       "path": "pages/aaa/index",
       "style": {
