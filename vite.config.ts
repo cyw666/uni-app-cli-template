@@ -20,7 +20,7 @@ export default defineConfig(({ command, mode, ssrBuild }) => {
     uniAxiosAdapter({}),
     AutoImport({
       imports: ['vue'],
-      dts: 'src/auto-imports.d.ts',
+      dts: 'types/auto-imports.d.ts',
     }),
   ]
 
