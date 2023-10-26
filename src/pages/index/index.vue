@@ -7,7 +7,7 @@
     <view class="text-area">
       <text class="title">{{ isVoiceEnable }}</text>
     </view>
-    <view text-green5 text-lg>Hello UnoCSS + Vue</view>
+    <view text-lg text-green5>Hello UnoCSS + Vue</view>
     <uni-badge text="1"></uni-badge>
     <uni-countdown :day="1" :hour="1" :minute="12" :second="40"></uni-countdown>
 
